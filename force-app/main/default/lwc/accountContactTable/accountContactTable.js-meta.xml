@@ -7,10 +7,4 @@
         <target>lightning__RecordPage</target>
         <target>lightning__HomePage</target>
     </targets>
-    <targetConfigs>
-        <targetConfig targets="lightning__AppPage,lightning__RecordPage,lightning__HomePage">
-            <property name="description" type="String" label="Description" 
-                      default="Displays accounts with their related contacts in a table format"/>
-        </targetConfig>
-    </targetConfigs>
 </LightningComponentBundle>
