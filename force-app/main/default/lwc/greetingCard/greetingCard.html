@@ -1,0 +1,34 @@
+<template>
+    <lightning-card title="Welcome Message" icon-name="standard:messaging_user">
+        <div class="slds-p-around_medium">
+            <div class="slds-text-align_center">
+                <lightning-icon icon-name="action:approval" size="large" class="slds-m-bottom_small"></lightning-icon>
+                <h1 class="slds-text-heading_large slds-m-bottom_small">{greeting}</h1>
+                <p class="slds-text-body_regular slds-text-color_weak">{message}</p>
+            </div>
+            
+            <div class="slds-m-top_large">
+                <lightning-input
+                    label="Enter Your Name"
+                    value={userName}
+                    onchange={handleNameChange}
+                    placeholder="Type your name here...">
+                </lightning-input>
+            </div>
+            
+            <div class="slds-m-top_medium slds-text-align_center">
+                <lightning-button
+                    variant="brand"
+                    label="Show Greeting"
+                    onclick={handleShowGreeting}
+                    class="slds-m-right_small">
+                </lightning-button>
+                <lightning-button
+                    variant="neutral"
+                    label="Reset"
+                    onclick={handleReset}>
+                </lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+</template>
