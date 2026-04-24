@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Contact List">
+        <template if:true={contacts}>
+            <ul>
+                <template for:each={contacts} for:item="con">
+                    <li key={con.Id}>
+                        {con.Name} - {con.Email}
+                    </li>
+                </template>
+            </ul>
+        </template>
+
+        <template if:true={error}>
+            <p>Error loading contacts</p>
+        </template>
+
+        <lightning-button 
+            label="Refresh" 
+            onclick={handleRefresh}>
+        </lightning-button>
+    </lightning-card>
+</template>
